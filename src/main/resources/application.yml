@@ -9,7 +9,7 @@ spring:
         git:
           uri: https://github.com/ProjectSoftwareArchitectureIUH/file_config_service.git
           default-label: main
-        bootstrap: false
+#        bootstrap: false
 
 eureka:
   client:
