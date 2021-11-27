@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: ${PORT:8888}
 spring:
   application:
     name: CONFIG_SERVICE
@@ -12,12 +12,12 @@ spring:
 #        bootstrap: false
 
 eureka:
+  instance:
+    hostname: servicecloudconfig.herokuapp.com
+    homePageUrl: https://${eureka.instance.hostName}/
+    home-page-url-path: https://${eureka.instance.hostName}
   client:
-    register-with-eureka:
-      value: true
-    fetch-registry:
-      value: true
-    service-url:
-      defaultZone: http://eureka.herokuapp.com/eureka
-    instance:
-      hostname: localhost
+    serviceUrl:
+      defaultZone: http://eureka.herokuapp.com/eureka/
+      non-secure-port: 80
+      secure-port: 443
