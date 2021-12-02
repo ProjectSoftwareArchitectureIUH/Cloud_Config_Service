@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/ProjectSoftwareArchitectureIUH/file_config_service.git
           clone-on-start: true
           default-label: main
-#        bootstrap: false
+       bootstrap: false
 
 eureka:
   instance:
